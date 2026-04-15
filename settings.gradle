@@ -1,0 +1,2 @@
+rootProject.name='sensory-overload'
+include ':app'
