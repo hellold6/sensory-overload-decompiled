@@ -88,11 +88,11 @@
     <color name="error_color_material_light">#ff5722</color>
     <color name="exo_black_opacity_60">#98000000</color>
     <color name="exo_black_opacity_70">#b3000000</color>
-    <color name="exo_bottom_bar_background">#b0000000</color>
+    <color name="exo_bottom_bar_background">#cc03050c</color>
     <color name="exo_edit_mode_background_color">#fff4f3f0</color>
     <color name="exo_styled_error_message_background">#80808080</color>
     <color name="exo_white">#ffffff</color>
-    <color name="exo_white_opacity_70">#b3ffffff</color>
+    <color name="exo_white_opacity_70">#e6ffffff</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>

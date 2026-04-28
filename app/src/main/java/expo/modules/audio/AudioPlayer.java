@@ -181,11 +181,20 @@ public final class AudioPlayer extends SharedRef<ExoPlayer> {
     public final Job setVolume(Float volume) {
         CoroutineScope mainQueue;
         Job launch$default;
+        Float normalizedVolume = volume;
+        if (volume != null) {
+            float max = Math.max(0.0f, Math.min(1.0f, volume.floatValue()));
+            if (max > 0.0f) {
+                this.previousVolume = max;
+            }
+            this.isMuted = max == 0.0f;
+            normalizedVolume = Float.valueOf(max);
+        }
         AppContext appContext = getAppContext();
         if (appContext == null || (mainQueue = appContext.getMainQueue()) == null) {
             return null;
         }
-        launch$default = BuildersKt__Builders_commonKt.launch$default(mainQueue, null, null, new AudioPlayer$setVolume$1(volume, this, null), 3, null);
+        launch$default = BuildersKt__Builders_commonKt.launch$default(mainQueue, null, null, new AudioPlayer$setVolume$1(normalizedVolume, this, null), 3, null);
         return launch$default;
     }
 
@@ -193,6 +202,13 @@ public final class AudioPlayer extends SharedRef<ExoPlayer> {
         Intrinsics.checkNotNullParameter(source, "source");
         getRef().setMediaSource(source);
         getRef().prepare();
+        if (this.isMuted || getRef().getVolume() <= 0.0f) {
+            float f = this.previousVolume;
+            float f2 = f > 0.0f ? f : 0.75f;
+            this.isMuted = false;
+            getRef().setVolume(f2);
+            this.previousVolume = f2;
+        }
         startUpdating();
     }
 

@@ -3081,6 +3081,7 @@
     </style>
     <style name="ExoStyledControls.Button.Bottom.CC" parent="@style/ExoStyledControls.Button.Bottom">
         <item name="android:src">@drawable/exo_styled_controls_subtitle_off</item>
+        <item name="android:tint">@color/exo_white_opacity_70</item>
         <item name="android:contentDescription">@string/exo_controls_cc_disabled_description</item>
     </style>
     <style name="ExoStyledControls.Button.Bottom.FullScreen" parent="@style/ExoStyledControls.Button.Bottom">

@@ -2,7 +2,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
     <View
         android:id="@+id/exo_controls_background"
-        android:background="@color/exo_black_opacity_60"
+        android:background="@color/exo_black_opacity_70"
         android:layout_width="0dp"
         android:layout_height="0dp"/>
     <FrameLayout

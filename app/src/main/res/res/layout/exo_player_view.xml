@@ -24,8 +24,14 @@
             android:contentDescription="@null"/>
         <androidx.media3.ui.SubtitleView
             android:id="@+id/exo_subtitles"
+            android:layout_gravity="bottom"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="28dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
         <ProgressBar
             android:layout_gravity="center"
             android:id="@+id/exo_buffering"

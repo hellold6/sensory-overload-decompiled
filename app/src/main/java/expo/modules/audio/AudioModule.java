@@ -189,6 +189,7 @@ public final class AudioModule extends Module {
         DefaultDataSource.Factory factory;
         int hashCode;
         if (source == null || (uri = source.getUri()) == null) {
+            Log.w(TAG, "Preset audio source is missing a URI; media item was not created.");
             return null;
         }
         Uri parse = Uri.parse(uri);
@@ -204,7 +205,14 @@ public final class AudioModule extends Module {
         } else {
             factory = new DefaultDataSource.Factory(getContext());
         }
-        return buildMediaSourceFactory(factory, fromUri);
+        try {
+            return buildMediaSourceFactory(factory, fromUri);
+        } catch (IllegalStateException e) {
+            Log.w(TAG, "Unsupported media type for URI " + uri + ". Falling back to progressive source.", e);
+            MediaSource createMediaSource = new ProgressiveMediaSource.Factory(factory).createMediaSource(fromUri);
+            Intrinsics.checkNotNullExpressionValue(createMediaSource, "createMediaSource(...)");
+            return createMediaSource;
+        }
     }
 
     private final DataSource.Factory httpDataSourceFactory(Map<String, String> headers) {
@@ -229,6 +237,7 @@ public final class AudioModule extends Module {
 
     private final Uri getRawResourceURI(String file) {
         if (getContext().getResources().getIdentifier(file, "raw", getContext().getPackageName()) == 0) {
+            Log.w(TAG, "Raw resource was not found for '" + file + "'. Falling back to file URI.");
             Uri fromFile = Uri.fromFile(new File(file));
             Intrinsics.checkNotNullExpressionValue(fromFile, "fromFile(...)");
             return fromFile;
