@@ -352,7 +352,6 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
         int i4;
         ActionMenuPresenter actionMenuPresenter = this;
         View view = null;
-        ?? r3 = 0;
         if (actionMenuPresenter.mMenu != null) {
             arrayList = actionMenuPresenter.mMenu.getVisibleItems();
             i = arrayList.size();

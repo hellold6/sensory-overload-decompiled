@@ -1189,8 +1189,6 @@ public final class NalUnitUtil {
     /* JADX WARN: Type inference failed for: r9v4 */
     /* JADX WARN: Type inference failed for: r9v5 */
     private static void skipH265HrdParameters(ParsableNalUnitBitArray parsableNalUnitBitArray, boolean z, int i) {
-        ?? r9;
-        ?? r1;
         boolean z2;
         boolean readBit;
         if (z) {

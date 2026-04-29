@@ -100,7 +100,6 @@ public final class ObuParser {
             int i;
             int i2;
             boolean z;
-            ?? r8;
             Assertions.checkArgument(obu.type == 1);
             byte[] bArr = new byte[obu.payload.remaining()];
             obu.payload.asReadOnlyBuffer().get(bArr);

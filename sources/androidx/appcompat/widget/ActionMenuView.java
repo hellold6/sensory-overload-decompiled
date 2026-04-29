@@ -147,7 +147,6 @@ public class ActionMenuView extends LinearLayoutCompat implements MenuBuilder.It
         int i4;
         boolean z;
         boolean z2;
-        ?? r3;
         int i5;
         int mode = View.MeasureSpec.getMode(i2);
         int size = View.MeasureSpec.getSize(i);

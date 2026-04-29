@@ -1635,7 +1635,6 @@ public class MediaSessionLegacyStub extends MediaSessionCompat.Callback {
         }
         PlaybackException playbackException3 = playbackException;
         PlaybackStateCompat.Builder extras = new PlaybackStateCompat.Builder().setState(convertToPlaybackStateCompatState, currentPosition, f2, SystemClock.elapsedRealtime()).setActions(j2).setActiveQueueItemId(convertToQueueItemId).setBufferedPosition(j).setExtras(bundle3);
-        ?? r2 = 0;
         while (r2 < this.customLayout.size()) {
             CommandButton commandButton = this.customLayout.get(r2);
             SessionCommand sessionCommand = commandButton.sessionCommand;
