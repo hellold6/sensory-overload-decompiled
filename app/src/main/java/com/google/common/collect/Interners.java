@@ -71,7 +71,7 @@ public final class Interners {
         public E intern(E e) {
             E e2;
             do {
-                ?? entry = this.map.getEntry(e);
+                MapMakerInternalMap.Entry<E, MapMaker.Dummy> entry = this.map.getEntry(e);
                 if (entry != 0 && (e2 = (E) entry.getKey()) != null) {
                     return e2;
                 }

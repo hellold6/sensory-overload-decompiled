@@ -3854,12 +3854,12 @@ public class LocalCache<K, V> extends AbstractMap<K, V> implements ConcurrentMap
         while (i < 3) {
             int length = segmentArr.length;
             long j2 = 0;
-            for (?? r12 = z; r12 < length; r12++) {
+            for (int r12 = z ? 1 : 0; r12 < length; r12++) {
                 Segment<K, V> segment = segmentArr[r12];
                 int i2 = segment.count;
                 AtomicReferenceArray<ReferenceEntry<K, V>> atomicReferenceArray = segment.table;
                 boolean z2 = z;
-                for (?? r15 = z2; r15 < atomicReferenceArray.length(); r15++) {
+                for (int r15 = z2 ? 1 : 0; r15 < atomicReferenceArray.length(); r15++) {
                     ReferenceEntry<K, V> referenceEntry = atomicReferenceArray.get(r15);
                     while (referenceEntry != null) {
                         Segment<K, V>[] segmentArr2 = segmentArr;

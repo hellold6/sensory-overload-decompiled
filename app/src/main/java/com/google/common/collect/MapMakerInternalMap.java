@@ -1964,11 +1964,11 @@ public class MapMakerInternalMap<K, V, E extends InternalEntry<K, V, E>, S exten
         while (i < 3) {
             int length = segmentArr.length;
             long j2 = 0;
-            for (?? r10 = z; r10 < length; r10++) {
-                ?? r11 = segmentArr[r10];
+            for (int r10 = z ? 1 : 0; r10 < length; r10++) {
+                Segment<K, V, E, S> r11 = segmentArr[r10];
                 int i2 = r11.count;
                 AtomicReferenceArray<E> atomicReferenceArray = r11.table;
-                for (?? r13 = z; r13 < atomicReferenceArray.length(); r13++) {
+                for (int r13 = z ? 1 : 0; r13 < atomicReferenceArray.length(); r13++) {
                     E e = atomicReferenceArray.get(r13);
                     while (e != null) {
                         Object liveValue = r11.getLiveValue(e);

@@ -705,7 +705,7 @@ public class Chip extends AppCompatCheckBox implements ChipDrawable.Delegate, Sh
 
     /* JADX WARN: Type inference failed for: r0v0, types: [int, boolean] */
     private int[] createCloseIconDrawableState() {
-        ?? isEnabled = isEnabled();
+        int isEnabled = isEnabled() ? 1 : 0;
         int i = isEnabled;
         if (this.closeIconFocused) {
             i = isEnabled + 1;

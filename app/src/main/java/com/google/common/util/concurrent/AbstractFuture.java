@@ -73,7 +73,7 @@ public abstract class AbstractFuture<V> extends InternalFutureFailureAccess impl
         }
         GENERATE_CANCELLATION_CAUSES = z;
         log = new LazyLogger(AbstractFuture.class);
-        ?? r2 = 0;
+        Object r2 = 0;
         r2 = 0;
         try {
             atomicHelper = new UnsafeAtomicHelper();

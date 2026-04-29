@@ -117,7 +117,7 @@ public final class CommonNotificationBuilder {
     /* JADX WARN: Type inference failed for: r0v6 */
     private static int getConsolidatedDefaults(NotificationParams notificationParams) {
         boolean z = notificationParams.getBoolean(Constants.MessageNotificationKeys.DEFAULT_SOUND);
-        ?? r0 = z;
+        int r0 = z ? 1 : 0;
         if (notificationParams.getBoolean(Constants.MessageNotificationKeys.DEFAULT_VIBRATE_TIMINGS)) {
             r0 = (z ? 1 : 0) | 2;
         }
