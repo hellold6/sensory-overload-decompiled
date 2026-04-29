@@ -1058,7 +1058,6 @@ public class StaggeredGridLayoutManager extends RecyclerView.LayoutManager imple
         StaggeredGridLayoutManager staggeredGridLayoutManager;
         boolean areAllStartsEqual;
         StaggeredGridLayoutManager staggeredGridLayoutManager2 = this;
-        ?? r8 = 0;
         staggeredGridLayoutManager2.mRemainingSpans.set(0, staggeredGridLayoutManager2.mSpanCount, true);
         if (staggeredGridLayoutManager2.mLayoutState.mInfinite) {
             i = layoutState.mLayoutDirection == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;

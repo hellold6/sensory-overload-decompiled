@@ -43,7 +43,6 @@ public final class ScreenFooter extends ReactViewGroup {
         Intrinsics.checkNotNullParameter(reactContext, "reactContext");
         this.reactContext = reactContext;
         this.lastStableSheetState = 5;
-        ?? r0 = new WindowInsetsAnimationCompat.Callback() { // from class: com.swmansion.rnscreens.ScreenFooter$insetsAnimation$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);

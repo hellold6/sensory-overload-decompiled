@@ -794,7 +794,6 @@ public class ExifInterface {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Not initialized variable reg: 4, insn: 0x015b: MOVE (r3 I:??[OBJECT, ARRAY]) = (r4 I:??[OBJECT, ARRAY]), block:B:103:0x015a */
         /* JADX WARN: Removed duplicated region for block: B:105:0x015e A[EXC_TOP_SPLITTER, SYNTHETIC] */
         /* JADX WARN: Removed duplicated region for block: B:112:? A[SYNTHETIC] */
         /* JADX WARN: Type inference failed for: r13v22, types: [int[]] */

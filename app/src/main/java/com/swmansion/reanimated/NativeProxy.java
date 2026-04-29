@@ -293,8 +293,6 @@ public class NativeProxy {
     /* JADX WARN: Type inference failed for: r1v1, types: [java.util.PrimitiveIterator$OfDouble] */
     public void synchronouslyUpdateUIProps(int[] iArr, double[] dArr) {
         String str;
-        ?? it = Arrays.stream(iArr).iterator();
-        ?? it2 = Arrays.stream(dArr).iterator();
         JavaOnlyMap javaOnlyMap = new JavaOnlyMap();
         int i = -1;
         while (it.hasNext()) {

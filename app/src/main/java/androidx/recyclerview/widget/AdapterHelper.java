@@ -547,7 +547,6 @@ public final class AdapterHelper implements OpReorderer.Callback {
             if (i == 8) {
                 return "mv";
             }
-            return "??";
         }
 
         public String toString() {

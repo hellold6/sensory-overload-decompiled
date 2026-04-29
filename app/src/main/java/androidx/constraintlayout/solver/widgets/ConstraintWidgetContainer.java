@@ -295,7 +295,6 @@ public class ConstraintWidgetContainer extends WidgetContainer {
     /* JADX WARN: Type inference failed for: r16v3 */
     @Override // androidx.constraintlayout.solver.widgets.WidgetContainer
     public void layout() {
-        ?? r16;
         boolean z;
         int i = 0;
         this.mX = 0;

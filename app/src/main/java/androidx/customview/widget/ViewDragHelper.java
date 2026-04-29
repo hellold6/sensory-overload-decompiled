@@ -663,7 +663,6 @@ public class ViewDragHelper {
         if (checkNewEdgeDrag(f, f2, i, 2)) {
             z2 = (z ? 1 : 0) | 2;
         }
-        ?? r0 = z2;
         if (checkNewEdgeDrag(f2, f, i, 8)) {
             r0 = (z2 ? 1 : 0) | 8;
         }
